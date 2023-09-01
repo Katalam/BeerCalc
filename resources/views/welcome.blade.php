@@ -20,7 +20,16 @@
         drinks: [
             ['Bier', 300, 0],
             ['Berliner', 450, 0],
-            ['Pfand', -100, 0]
+            ['Saft', 300, 0],
+            ['Soft', 350, 0],
+            ['Selter', 200, 0],
+            ['Bowle', 500, 0],
+            ['Klopfer', 250, 0],
+            ['Kräuter', 250, 0],
+            ['Cola-Mix', 550, 0],
+            ['Vodka-E', 550, 0],
+            ['Wein/Sekt', 450, 0],
+            ['Pfand', -100, 0],
         ]
     }">
 <div
@@ -30,8 +39,8 @@
             <img class="w-20" src="{{ Vite::asset('resources/images/patch.png') }}" alt="">
         </div>
 
-        <div class="mt-16">
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2">
+        <div class="mt-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-2">
                 <template x-for="drink in drinks" :key="drink[0]">
                     <x-drink>
                         <x-slot name="title">
@@ -50,11 +59,14 @@
                 </template>
             </div>
 
-            <div class="w-full flex items-center justify-center text-3xl font-bold mt-40">
+            <div class="w-full flex items-center justify-center text-3xl font-bold mt-8 gap-2">
                 <div class="flex flex-col items-center justify-center">
                     <p>Summe</p>
                     <p x-text="new Intl.NumberFormat('de-DE', {style: 'currency', currency: 'EUR'}).format(drinks.map(drink => drink[1] * drink[2]).reduce((partialSum, a) => partialSum + a, 0)/100)"></p>
                 </div>
+                <button @click="drinks.forEach(drink => drink[2] = 0)"
+                        class="bg-gray-700 text-white rounded px-3 py-2 font-bold uppercase text-3xl">R
+                </button>
             </div>
         </div>
     </div>
