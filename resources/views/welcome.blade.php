@@ -16,7 +16,7 @@
     <!-- Scripts -->
     @vite('resources/js/app.js')
 </head>
-<body class="antialiased" x-data="{
+<body class="antialiased disable-dbl-tap-zoom" x-data="{
         drinks: [
             ['Bier', 300, 0],
             ['Berliner', 450, 0],
