@@ -11,7 +11,7 @@
             ['Klopfer', 250, 0],
             ['Mische (Pfand)', 550, 0],
             ['Los', 100, 0],
-            ['Pfand', -100, 0],
+            ['Pfandrückgabe', -100, 0],
         ]
     }">
     <div
