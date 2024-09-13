@@ -6,7 +6,7 @@
             ['Soft (Pfand)', 350, 0],
             ['Saft (Pfand)', 300, 0],
             ['Selter (Pfand)', 200, 0],
-            ['Wein/Sekt (Pfand)', 450, 0],
+            ['Wein/Sekt (Pfand)', 500, 0],
             ['Bowle (Pfand)', 500, 0],
             ['Klopfer', 250, 0],
             ['Mische (Pfand)', 550, 0],
